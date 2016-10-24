@@ -7,7 +7,7 @@ import java.util.OptionalDouble;
  * @author wangchangye
  *
  */
-public class OptionalTest {
+public class OptionalTest01 {
 	public static void main(String[] args) {
 		calc(10,2).ifPresent(System.out::println);
 	}
