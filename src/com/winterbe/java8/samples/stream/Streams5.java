@@ -20,10 +20,10 @@ public class Streams5 {
 //        test2(strings);
 //        test3(strings);
 //        test4(strings);
-//        test5(strings);
+        test5(strings);
 //        test6(strings);
 //        test7(strings);
-        test8(strings);
+//        test8(strings);
     }
 
     private static void test8(List<String> stringCollection) {

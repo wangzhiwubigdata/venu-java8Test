@@ -24,10 +24,10 @@ public class Interface1 {
                 return sqrt(a * 100);
             }
         };
-
-        formula1.calculate(100);     // 100.0
-        formula1.sqrt(-23);          // 0.0
-        Formula.positive(-4);        // 0.0
+        System.err.println(formula1.calculate(100));// 100.0
+             
+        System.err.println(formula1.sqrt(-23));          // 0.0
+        System.err.println(Formula.positive(-4));        // 0.0
 
 //        Formula formula2 = (a) -> sqrt( a * 100);
     }

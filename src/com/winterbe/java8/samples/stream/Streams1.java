@@ -28,7 +28,7 @@ public class Streams1 {
                 .stream()
                 .filter((s) -> s.startsWith("a"))
                 .forEach(System.out::println);
-
+        System.err.println("------------------------");
         // "aaa2", "aaa1"
 
 
@@ -41,7 +41,7 @@ public class Streams1 {
                 .forEach(System.out::println);
 
         // "aaa1", "aaa2"
-
+        System.err.println("---------------------");
 
         // mapping
 

@@ -6,31 +6,33 @@ package com.winterbe.java8.samples.misc;
 public class Math1 {
 
     public static void main(String[] args) {
-        testMathExact();
+//        testMathExact();
         testUnsignedInt();
     }
 
     private static void testUnsignedInt() {
         try {
-            Integer.parseUnsignedInt("-123", 10);
+            int i = Integer.parseUnsignedInt("123", 10);//-123则报错
+            System.err.println(i);
         }
         catch (NumberFormatException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage()+"111");
         }
 
         long maxUnsignedInt = (1l << 32) - 1;
-        System.out.println(maxUnsignedInt);
+        System.out.println(maxUnsignedInt);//4294967295
 
-        String string = String.valueOf(maxUnsignedInt);
+        String string = String.valueOf(maxUnsignedInt);//4294967295
 
-        int unsignedInt = Integer.parseUnsignedInt(string, 10);
+        int unsignedInt = Integer.parseUnsignedInt(string, 10);//-1
         System.out.println(unsignedInt);
 
-        String string2 = Integer.toUnsignedString(unsignedInt, 10);
+        String string2 = Integer.toUnsignedString(unsignedInt, 10);//4294967295
         System.out.println(string2);
 
         try {
-            Integer.parseInt(string, 10);
+            int parseInt = Integer.parseInt(string, 10);
+            System.err.println(parseInt);
         }
         catch (NumberFormatException e) {
             System.err.println("could not parse signed int of " + maxUnsignedInt);
@@ -45,14 +47,14 @@ public class Math1 {
             Math.addExact(Integer.MAX_VALUE, 1);
         }
         catch (ArithmeticException e) {
-            System.err.println(e.getMessage());
+            System.err.println(e.getMessage()+1);
         }
 
         try {
             Math.toIntExact(Long.MAX_VALUE);
         }
         catch (ArithmeticException e) {
-            System.err.println(e.getMessage());
+            System.err.println(e.getMessage()+2);
         }
     }
 }

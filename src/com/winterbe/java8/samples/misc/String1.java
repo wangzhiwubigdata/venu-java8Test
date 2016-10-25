@@ -10,10 +10,10 @@ import java.util.stream.Stream;
 public class String1 {
 
     public static void main(String[] args) {
-        testJoin();
-        testChars();
+        //testJoin();
+        //testChars();
         testPatternPredicate();
-        testPatternSplit();
+        //testPatternSplit();
     }
 
     private static void testChars() {
